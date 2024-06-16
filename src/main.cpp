@@ -54,7 +54,7 @@ int main() {
         fault_tolerance_handler.handle_system_failure();
 
         // 4. Object-Oriented Programming Language (OOPS)
-        // Python is already an object-oriented language
+        // I worte this in C++ & the code followed OOPs principals 
 
         // 5. Trade-offs in the System
         trade_off_documentation.document_trade_offs();
@@ -79,9 +79,9 @@ int main() {
             cout << "Trip " << trip.id << ": Allocate Cab " << best_cab.id << endl;
         }
 
-        pair<double, double> employee_location = {99.0, 1.0};
-        vector<Cab> nearby_cabs = employee_cab_search.suggest_nearby_cabs(employee_location);
-        cout << "Employee at (" << employee_location.first << ", " << employee_location.second << "): Nearby Cabs ";
+        pair<double, double> trip_location = {99.0, 1.0};
+        vector<Cab> nearby_cabs = employee_cab_search.suggest_nearby_cabs(trip_location);
+        cout << "Trip starts at (" << trip_location.first << ", " << trip_location.second << "): Nearby Cabs ";
         for (auto& cab : nearby_cabs) {
             cout << cab.id << " ";
         }
@@ -91,8 +91,8 @@ int main() {
         real_time_location_data.update_cab_location(2, {16.0, 16.0});
 
         // Refresh suggestions with updated location data
-        nearby_cabs = employee_cab_search.suggest_nearby_cabs(employee_location);
-        cout << "After update - Employee at (" << employee_location.first << ", " << employee_location.second << "): Nearby Cabs ";
+        nearby_cabs = employee_cab_search.suggest_nearby_cabs(trip_location);
+        cout << "After update - Trip starts at (" << trip_location.first << ", " << trip_location.second << "): Nearby Cabs ";
         for (auto& cab : nearby_cabs) {
             cout << cab.id << " ";
         }
